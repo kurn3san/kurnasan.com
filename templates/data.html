@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- In the <head> section of your HTML files -->
+<link rel="stylesheet" href="static/styles.css">
+
+  <title>Data Page</title>
+</head>
+<body>
+  <h1>Data Page</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data %}
+        <tr>
+          <td>{{ item.number }}</td>
+          <td>{{ item.name }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  <br>
+  <a href="/">Go back to Welcome Page</a>
+</body>
+</html>
