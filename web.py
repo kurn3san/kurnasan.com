@@ -15,15 +15,18 @@ data=data = [
 @app.get('/')
 def get_welcome(request: Request):
     return templates.TemplateResponse("welcome.html", {"request": request})
-
-@app.post('/')
-async def post_welcome(request: Request):
-    form = await request.form()
-    number = form.get("number")
-    name = form.get("name")
-    # Store the form data in a dictionary or JSON file
-    data.append({"number":number,"name":name})
-    return templates.TemplateResponse("welcome.html", {"request": request})
+try:
+    @app.post('/')
+    async def post_welcome(request: Request):
+        form = await request.form()
+        number = form.get("number")
+        name = form.get("name")
+        # Store the form data in a dictionary or JSON file
+        data.append({"number":number,"name":name})
+        return templates.TemplateResponse("welcome.html", {"request": request})
+except Exception as e:
+    print("error...  "+str(e))
+    
 
 @app.get('/data')
 async def get_data(request: Request):
