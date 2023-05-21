@@ -27,6 +27,9 @@ try:
 except Exception as e:
     print("error...  "+str(e))
     
+@app.delete('/')
+async def delete_data(request: Request):
+    data.pop()
 
 @app.get('/data')
 async def get_data(request: Request):

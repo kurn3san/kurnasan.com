@@ -1,23 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="static/styles.css">
-<title>Welcome Page</title>
+  <title>Welcome to Muhammed Kurnasan's website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .nav-buttons {
+      text-align: right;
+    }
+    
+    .nav-buttons a {
+      color: #fff;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+    
+    .middle {
+      background-color: #f2f2f2;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .quote-section {
+      width: 40%;
+      padding: 20px;
+    }
+    
+    .image-section {
+      width: 55%;
+      text-align: right;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #999;
+      padding: 10px;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    .footer-links li {
+      margin-right: 10px;
+    }
+    
+    .footer-links a {
+      color: #999;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Kurnasan's first webpage!</h1>
+  <header>
+    <div class="logo">Muhammed Kurnasan</div>
+    <div class="nav-buttons">
+      <a href="#about">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="Muhammed Kurnasan.pdf" download>Download Resume</a>
+    </div>
+  </header>
   
-  <form action="/" method="post">
-    <label for="number">Number:</label>
-    <input type="text" id="number" name="number" required><br><br>
-    
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
-    
-    <input type="submit" value="Submit">
-  </form>
+  <div class="middle">
+    <div class="quote-section">
+      <blockquote>
+        "quote goes here"
+      </blockquote>
+    </div>
+    <div class="image-section">
+      <img src="your-image.jpg" alt="Your Image">
+    </div>
+  </div>
   
-  <br>
-  <a href="/data">Go to Data Page</a>
+  <footer>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="Muhammed Kurnasan.pdf" download>Download Resume</a></li>
+    </ul>
+    <span style="float: right;">@Kurnasan</span>
+  </footer>
 </body>
 </html>
