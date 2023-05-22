@@ -2,84 +2,135 @@
 <html>
 <head>
   <title>Welcome to Muhammed Kurnasan's website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-    }
-    
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-    }
-    
-    .nav-buttons {
-      text-align: right;
-    }
-    
-    .nav-buttons a {
-      color: #fff;
-      margin-left: 10px;
-      text-decoration: none;
-    }
-    
-    .middle {
-      background-color: #f2f2f2;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .quote-section {
-      width: 40%;
-      padding: 20px;
-    }
-    
-    .image-section {
-      width: 55%;
-      text-align: right;
-    }
-    
-    footer {
-      background-color: #333;
-      color: #999;
-      padding: 10px;
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .footer-links {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    
-    .footer-links li {
-      margin-right: 10px;
-    }
-    
-    .footer-links a {
-      color: #999;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='styles.css') }}">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  text-align: right;
+}
+
+.nav-buttons a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.middle {
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quote-section {
+  width: 40%;
+  padding: 20px;
+}
+
+.image-section {
+  width: 55%;
+  text-align: right;
+}
+
+footer {
+  background-color: #333;
+  color: #999;
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-links li {
+  margin-right: 10px;
+}
+
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+}
+
+.language-select {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.language-list {
+  display: flex;
+  text-align: right;
+  margin-left: 10px;
+
+}
+
+.language-list a {
+  color: #fff;
+  margin-left: 10px;
+  margin-right:5px;
+  text-decoration: none;
+  font-size: 10px;
+}.quote-section {
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  color: #333333;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+</style>
+
+<script src="/static/script.js"></script>
+
 </head>
 <body>
   <header>
+    <div class="language-select">
+      <ul class="language-list">
+        <a href="#" onclick="changeLanguage('en')">English</a>
+        <a href="#" onclick="changeLanguage('fr')">French</a>        
+        <a href="#" onclick="changeLanguage('fr')">German</a>
+        <a href="#" onclick="changeLanguage('fr')">Turkish</a>
+        <a href="#" onclick="changeLanguage('fr')">Arabic</a>
+
+        
+        <!-- Add more language options as needed -->
+      </ul>
+    </div>
+    
     <div class="logo">Muhammed Kurnasan</div>
     <div class="nav-buttons">
       <a href="#about">About</a>
       <a href="projects.html">Projects</a>
+      <a href="projects.html">Tools</a>
+      <a href="projects.html">Quotes</a>
       <a href="Muhammed Kurnasan.pdf" download>Download Resume</a>
     </div>
   </header>
@@ -87,7 +138,7 @@
   <div class="middle">
     <div class="quote-section">
       <blockquote>
-        "quote goes here"
+        "The best of people are those whose benefits reach others."
       </blockquote>
     </div>
     <div class="image-section">
@@ -95,7 +146,7 @@
     </div>
   </div>
   
-  <footer>
+  <footer class="footer">
     <ul class="footer-links">
       <li><a href="#about">About</a></li>
       <li><a href="projects.html">Projects</a></li>
