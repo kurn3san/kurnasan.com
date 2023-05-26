@@ -94,20 +94,51 @@ footer {
   margin-right:5px;
   text-decoration: none;
   font-size: 10px;
-}.quote-section {
-  font-family: "Arial", sans-serif;
-  font-size: 24px;
-  color: #333333;
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 10px;
+}
+.quote-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px #8b8eaf;
+}
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
   text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 7.875rem;
+  height: 4.25rem;
+}
+.icon-card {
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.icon-card:hover {
+  border-color: #f00;
 }
 
 
 </style>
 
-<script src="/static/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r150/three.min.js"></script>
 
 </head>
 <body>
@@ -127,24 +158,152 @@ footer {
     
     <div class="logo">Muhammed Kurnasan</div>
     <div class="nav-buttons">
-      <a href="#about">About</a>
+    <a href="https://github.com/kurn3san" target="_blank">
+      <img
+      src="static/assets/github.png"
+      style="height: 28px; width: auto; vertical-align: middle;"
+    />
+    </a>
+    <a href="https://www.linkedin.com/in/muhammed-kurnasan-9b8086a9/"
+     target="_blank">
+     <img
+     src="static/assets/linkedin.png"
+     style="height: 28px; width: auto; vertical-align: middle;"
+   />
+    </a>  
+    <a href="#about">About</a>
       <a href="projects.html">Projects</a>
       <a href="projects.html">Tools</a>
       <a href="projects.html">Quotes</a>
       <a href="/resume/CV-Muhammed KURNASAN-5-23TR.pdf" download>Download Resume</a>
+      
     </div>
   </header>
   
   <div class="middle">
     <div class="quote-section">
       <blockquote>
-        "The best of people are those whose benefits reach others."
+        "You can do the Unimaginable and have some fun while doing it.. Aand get paid for it!"
       </blockquote>
     </div>
     <div class="image-section">
       <img src="your-image.jpg" alt="Your Image">
     </div>
   </div>
+          <!-- 
+            
+
+            main page...
+            
+            Add more skills
+          
+          
+          -->
+          <section class="skills" id="skills">
+            <h2 class="skill-header">My Top Skills</h2>
+      
+            <div class="skills-wrapper">
+              <div class="first-set animate__animated animate__pulse">
+                
+              </div>
+      
+              <div class="second-set animate__animated animate__pulse">
+                
+                <a href="https://www.gnu.org/software/bash/" target="_blank">
+                  <img
+                  src="static/assets/bash.png"
+                  alt=""
+                  loading="lazy"
+                  class="icon icon-card"
+                />
+              </a>
+                <a href="https://docker.io" target="_blank">
+                  <img
+                  src="static/assets/docker.png"
+                  alt=""
+                  loading="lazy"
+                  class="icon icon-card"
+                /></a>
+                <a href="https://fastapi.tiangolo.com/" target="_blank">
+                  <img
+                  src="static/assets/fastapi.png"
+                  alt=""
+                  loading="lazy"
+                  class="icon icon-card"
+                /></a>
+                <a href="https://flask.palletsprojects.com/" target="_blank">
+                  <img
+                  src="static/assets/flask.jpg"
+                  alt=""
+                  loading="lazy"
+                  class="icon icon-card"
+                /></a>
+              <a href="https://python.org" target="_blank">
+                <img
+                src="static/assets/python.png"
+                alt=""
+                loading="lazy"
+                class="icon icon-card"
+              /></a>              
+            <a href="https://java.com" target="_blank">
+              <img
+              src="static/assets/java.png"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            /></a>  
+          <a href="https://mysql.com" target="_blank">
+            <img
+            src="static/assets/musql.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /></a>  
+
+
+          <a href="https://pandas.pydata.org" target="_blank">
+            <img
+            src="static/assets/pandas.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /></a>  
+
+
+          <a href="https://matplotlib.org" target="_blank">
+            <img
+            src="static/assets/matplotlib.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /></a>  
+          
+          <a href="https://tensorflow.org" target="_blank">
+            <img
+            src="static/assets/tf.jpg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /></a>  
+          <a href="https://php.net" target="_blank">
+            <img
+            src="static/assets/php.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /></a>  
+          <a href="https://numpy.org" target="_blank">
+            <img
+            src="static/assets/nmpy.jpg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /></a>  
+ 
+              </div>
+            </div>
+          </section>
+
   
   <footer class="footer">
     <ul class="footer-links">
@@ -154,5 +313,7 @@ footer {
     </ul>
     <span style="float: right;">@Kurnasan</span>
   </footer>
+  <script src="/static/script.js"></script>
+
 </body>
 </html>
